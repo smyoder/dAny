@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>dAny</title>
+    <link rel=stylesheet href="style.css">
+  </head>
+  <body>
+    <h1>Explanation</h1>
+    <p><a href="index.html">Back</a></p>
+    <h2>Approximating a Lower Die</h2>
+    <h3>Factoring</h3>
+    <p>
+      This is a method that you have probably used before. If you want to roll a die
+      which evenly divides into yours, just divide the numbers on your die into equal groups. This can be done
+      by <b>grouping</b> adjacent numbers together or using the <a target="_blank" href="https://en.wikipedia.org/wiki/Modulo"><b>modulo</b></a> operator
+      (the remainder after dividing). For a D20, this can be done for a D2, D4, D5, or D10.
+    </p>
+    <h4>Grouping</h4>
+    <div>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D2</th></tr>
+          <tr><td>D2 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 2, 3, 4, 5, 6, 7, 8, 9, 10</td></tr>
+          <tr><td>2</td><td>11, 12, 13, 14, 15, 16, 17, 18, 19, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D4</th></tr>
+          <tr><td>D4 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 2, 3, 4, 5</td></tr>
+          <tr><td>2</td><td>6, 7, 8, 9, 10</td></tr>
+          <tr><td>3</td><td>11, 12, 13, 14, 15</td></tr>
+          <tr><td>4</td><td>16, 17, 18, 19, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D5</th></tr>
+          <tr><td>D5 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 2, 3, 4</td></tr>
+          <tr><td>2</td><td>5, 6, 7, 8</td></tr>
+          <tr><td>3</td><td>9, 10, 11, 12</td></tr>
+          <tr><td>4</td><td>13, 14, 15, 16</td></tr>
+          <tr><td>5</td><td>17, 18, 19, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D10</th></tr>
+          <tr><td>D10 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 2</td></tr>
+          <tr><td>2</td><td>3, 4</td></tr>
+          <tr><td>3</td><td>5, 6</td></tr>
+          <tr><td>4</td><td>7, 8</td></tr>
+          <tr><td>5</td><td>9, 10</td></tr>
+          <tr><td>6</td><td>11, 12</td></tr>
+          <tr><td>7</td><td>13, 14</td></tr>
+          <tr><td>8</td><td>15, 16</td></tr>
+          <tr><td>9</td><td>17, 18</td></tr>
+          <tr><td>10</td><td>19, 20</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h4>Modulo</h4>
+    <div>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D2</th></tr>
+          <tr><td>D2 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 3, 5, 7, 9, 11, 13, 15, 17, 19</td></tr>
+          <tr><td>2</td><td>2, 4, 6, 8, 10, 12, 14, 16, 18, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D4</th></tr>
+          <tr><td>D4 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 5, 9, 13, 17</td></tr>
+          <tr><td>2</td><td>2, 6, 10, 14, 18</td></tr>
+          <tr><td>3</td><td>3, 7, 11, 15, 19</td></tr>
+          <tr><td>4</td><td>4, 8, 12, 16, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D5</th></tr>
+          <tr><td>D5 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 6, 11, 16</td></tr>
+          <tr><td>2</td><td>2, 7, 12, 17</td></tr>
+          <tr><td>3</td><td>3, 8, 13, 18</td></tr>
+          <tr><td>4</td><td>4, 9, 14, 19</td></tr>
+          <tr><td>5</td><td>5, 10, 15, 20</td></tr>
+        </tbody>
+      </table>
+      <table>
+        <tbody>
+          <tr><th colspan=2>D10</th></tr>
+          <tr><td>D10 Roll</td><td>D20 Roll</td></tr>
+          <tr><td>1</td><td>1, 11</td></tr>
+          <tr><td>2</td><td>2, 12</td></tr>
+          <tr><td>3</td><td>3, 13</td></tr>
+          <tr><td>4</td><td>4, 14</td></tr>
+          <tr><td>5</td><td>5, 15</td></tr>
+          <tr><td>6</td><td>6, 16</td></tr>
+          <tr><td>7</td><td>7, 17</td></tr>
+          <tr><td>8</td><td>8, 18</td></tr>
+          <tr><td>9</td><td>9, 19</td></tr>
+          <tr><td>10</td><td>10, 20</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>This application uses the modulo method.</p>
+    <h3>Re-Rolling</h3>
+    <p>
+      This method is definitely the most jank. You just re-roll the die until you get a number below
+      or equal to your target die. This will work to approximate any lower die, not just one that divides evenly
+      into a D20. The catch is that, the lower number you target, the more times you'll have to re-roll.
+    </p>
+    <h4>There's no way that actually works, right?</h4>
+    <p>
+      It does! And I can prove it. For the sake of clarity, I'll use a D3 to approximate a D2.
+    </p>
+    <p>
+      When you roll a D3, there are three possible, equally-weighted outcomes:
+    </p>
+    <ol>
+      <li>You roll a 1</li>
+      <li>You roll a 2</li>
+      <li>You roll a 3, which in this case means you re-roll.</li>
+    </ol>
+    <img src="img/reroll_1.png" style="height: 300px"/>
+    <p>
+      If you get a 1 or a 2, you stop there. Those are the possible values of a D2.
+      If you get a 3, you re-roll and have the same possible outcomes:
+    </p>
+    <img src="img/reroll_2.png" style="height: 300px"/>
+    <p>
+      One third of those outcomes results in a 1 and another third results in a 2 and we'll stop
+      rolling after that. So now, we have 1/3 + 1/9 chance to get a 1 and 1/3 + 1/9 chance to get a 2.
+    </p>
+    <img src="img/reroll_3.png" style="height: 300px"/>
+    <p>
+      There's also now a 1/9 chance after 1 potential re-roll that we have to re-roll again.
+      The same logic applies. 2/3 of the possible values of that third re-roll give us a 1 or a 2.
+    </p>
+    <div style="height: 300px">
+      <img src="img/reroll_4.png" style="height: 100%; display:inline"/>
+      <img src="img/reroll_5.png" style="height: 100%; display:inline"/>
+    </div>
+    <p>
+      As the number of re-rolls increases, the chance of not getting a 1 or a 2 diminishes to 0.
+      The chances of getting a 1 or a 2 are equally weighted, so they both approach 50%.
+    </p>
+    <img src="img/reroll_6.png" style="max-height: 300px"/>
+    <p>
+      This works for any fair die as long as the die being approximated is lower. [1]
+    </p>
+    <h2>Approximating a Higher Die</h2>
+    <h3>Dice Multiplication</h3>
+    <p>
+      If you've ever rolled percentile dice (D100), you've used this method. Normally, this would look
+      something like the following way of interpreting two D10 rolls:
+    </p>
+    <table>
+      <tbody>
+        <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td style="font-weight: bold;">1</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>10</td></tr>
+        <tr><td style="font-weight: bold;">2</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>20</td></tr>
+        <tr><td style="font-weight: bold;">3</td><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>30</td></tr>
+        <tr><td style="font-weight: bold;">4</td><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>40</td></tr>
+        <tr><td style="font-weight: bold;">5</td><td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>50</td></tr>
+        <tr><td style="font-weight: bold;">6</td><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>60</td></tr>
+        <tr><td style="font-weight: bold;">7</td><td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>70</td></tr>
+        <tr><td style="font-weight: bold;">8</td><td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>80</td></tr>
+        <tr><td style="font-weight: bold;">9</td><td>91</td><td>92</td><td>93</td><td>94</td><td>95</td><td>96</td><td>97</td><td>98</td><td>99</td><td>90</td></tr>
+        <tr><td style="font-weight: bold;">10</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <p>The method this application uses will produce a table that looks like this:</p>
+    <table>
+      <tbody>
+        <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td style="font-weight: bold;">1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td style="font-weight: bold;">2</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+        <tr><td style="font-weight: bold;">3</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+        <tr><td style="font-weight: bold;">4</td><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+        <tr><td style="font-weight: bold;">5</td><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td></tr>
+        <tr><td style="font-weight: bold;">6</td><td>51</td><td>52</td><td>53</td><td>54</td><td>55</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td></tr>
+        <tr><td style="font-weight: bold;">7</td><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td></tr>
+        <tr><td style="font-weight: bold;">8</td><td>71</td><td>72</td><td>73</td><td>74</td><td>75</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td></tr>
+        <tr><td style="font-weight: bold;">9</td><td>81</td><td>82</td><td>83</td><td>84</td><td>85</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td></tr>
+        <tr><td style="font-weight: bold;">10</td><td>91</td><td>92</td><td>93</td><td>94</td><td>95</td><td>96</td><td>97</td><td>98</td><td>99</td><td>100</td></tr>
+      </tbody>
+    </table>
+    <p>
+      This helps illustrate the next point, which is that, when you roll two dice, the number of outcomes you get is equal
+      to the product of each of their values (e.g. 10x10=100). We can divides these outcomes any way we like
+      and assign them the outcomes of a die with the product of their values. For example, we can
+      approximate a D20 with a D5 and a D4:
+    </p>
+    <table>
+      <tbody>
+        <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td style="font-weight: bold;">1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+        <tr><td style="font-weight: bold;">2</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+        <tr><td style="font-weight: bold;">3</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+        <tr><td style="font-weight: bold;">4</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+      </tbody>
+    </table>
+    <h4>That's not right because when you roll 2d6, the most likely result is a 7, what about THAT, HUH?? DIDN'T THINK ABOUT THAT HUH EINSTEIN???</h4>
+    <p>
+      Usually, when we roll two dice, we <i>add</i> the results. This will lead to unequal distributions because multiple different
+      rolls of the dice can add to the same value. In this case, we're not adding the results, we're using the dice
+      to look up values in the table we made. Think of one die as the <i>column</i> die and one as the <i>row</i> die.
+      We can even perform this lookup in higher dimensions. We can use a D4 and 2D5s to approximate a D100.
+    </p>
+    <div>
+      <table style="display: inline-block;">
+        <tbody>
+          <tr><th colspan=6><b><u>1</u></b></th></tr>
+          <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td style="font-weight: bold;">1</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td style="font-weight: bold;">2</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+          <tr><td style="font-weight: bold;">3</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+          <tr><td style="font-weight: bold;">4</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+          <tr><td style="font-weight: bold;">5</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+        </tbody>
+      </table>
+      <table style="display: inline-block;">
+        <tbody>
+          <tr><th colspan=6><b><u>2</u></b></th></tr>
+          <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td style="font-weight: bold;">1</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td></tr>
+          <tr><td style="font-weight: bold;">2</td><td>31</td><td>32</td><td>33</td><td>34</td><td>35</td></tr>
+          <tr><td style="font-weight: bold;">3</td><td>36</td><td>37</td><td>38</td><td>39</td><td>40</td></tr>
+          <tr><td style="font-weight: bold;">4</td><td>41</td><td>42</td><td>43</td><td>44</td><td>45</td></tr>
+          <tr><td style="font-weight: bold;">5</td><td>46</td><td>47</td><td>48</td><td>49</td><td>50</td></tr>
+        </tbody>
+      </table>
+      <table style="display: inline-block;">
+        <tbody>
+          <tr><th colspan=6><b><u>3</u></b></th></tr>
+          <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td style="font-weight: bold;">1</td><td>51</td><td>52</td><td>53</td><td>54</td><td>55</td></tr>
+          <tr><td style="font-weight: bold;">2</td><td>56</td><td>57</td><td>58</td><td>59</td><td>60</td></tr>
+          <tr><td style="font-weight: bold;">3</td><td>61</td><td>62</td><td>63</td><td>64</td><td>65</td></tr>
+          <tr><td style="font-weight: bold;">4</td><td>66</td><td>67</td><td>68</td><td>69</td><td>70</td></tr>
+          <tr><td style="font-weight: bold;">5</td><td>71</td><td>72</td><td>73</td><td>74</td><td>75</td></tr>
+        </tbody>
+      </table>
+      <table style="display: inline-block;">
+        <tbody>
+          <tr><th colspan=6><b><u>4</u></b></th></tr>
+          <tr style="font-weight: bold;"><td></td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td></tr>
+          <tr><td style="font-weight: bold;">1</td><td>76</td><td>77</td><td>78</td><td>79</td><td>80</td></tr>
+          <tr><td style="font-weight: bold;">2</td><td>81</td><td>82</td><td>83</td><td>84</td><td>85</td></tr>
+          <tr><td style="font-weight: bold;">3</td><td>86</td><td>87</td><td>88</td><td>89</td><td>90</td></tr>
+          <tr><td style="font-weight: bold;">4</td><td>91</td><td>92</td><td>93</td><td>94</td><td>95</td></tr>
+          <tr><td style="font-weight: bold;">5</td><td>96</td><td>97</td><td>98</td><td>99</td><td>100</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>
+      ️☝️🤓 The fundamental theorem of arithmetic [2] states that any integer greater than one can be
+      represented as a unique product of lower prime numbers. This means that we can approximate
+      any die that we have the factors for. In the previous section, we showed that we can approximate
+      all the dice smaller than a d20. So, we can multiply to any die whose prime factors are all less
+      than or equal to than 20. For example:
+    </p>
+    <p><b>D400: </b>Multiply(D20, D20)</p>
+    <img src="img/multiply_1.png" style="height: 100px"/>
+    <p><b>D100: </b>Multiply(D20, Factor(D20, D5))</p>
+    <img src="img/multiply_2.png" style="height: 150px"/>
+    <p><b>D30: </b>Multiply(Factor(D20, D2), Reroll(D20, D15))</p>
+    <img src="img/multiply_3.png" style="height: 150px"/>
+    <h4>But what about a,b,n∈Z where n=a*b, a is prime, and a>20?????</h4>
+    <p>
+      There are some dice we can't approximate just by multiplying together dice that are less than 20.
+      For example, 23 is a prime number. We can't multiply any other dice to make a D23. Luckily,
+      we can use a combination of all the methods we've discussed to approximate <i>any</i> die.
+    </p>
+    <h2>Approximating Any Aribitrary Fair Die</h2>
+    <h3>For D&le;20</h3>
+    <ol>
+      <li>Factor a D20 to the nearest value &ge; the target value</li>
+      <li>If the target value is less than that reduction, re-roll to the target value</li>
+    </ol>
+    <p>For example, Reroll(Factor(D20, D10), D6)</p>
+    <h3>For D&gt;20</h3>
+    <p>
+      This case is not as simple. Below is pseudo-code for finding good paths from 21-10000.
+    </p>
+    <pre><code>
+    for each integer i from 21 to 10000:
+      let factors = factorsOf(i)
+      let cheapestApproximation
+      // Check the costs of multiplying each pair of factors
+      for each unique pair of factors in factors:
+        check the approximate number of rolls needed to multiply this pair
+        if it's less than cheapestApproximation.cost:
+          cheapestApproximation = the approximation of multiplying these dice
+      // Next, see if rerolling this die makes a lesser die cheaper.
+      for each integer n where n &lt i
+        check the number of rolls to reroll this die
+        if it's cheaper than approximation[n].cost:
+          approximation[n] = reroll(i, n)
+    </code></pre>
+    <p>
+      Essentially, each die is first approximated via the multiplication method.
+      Once we get to higher dice, these can be checked to reroll a lower die.
+    </p>
+    <h4>But how do you approximate the number of rolls?</h4>
+    <ul>
+      <li>
+        For the factor method, no additional rolls are needed. The cost is the same as the die it was factored from.
+        (e.g. it costs nothing to interpret a D20 as a D2)
+      </li>
+      <li>
+        For the multiplication method, the cost is the sum of the costs of the two dice being multipled.
+        (e.g. to roll a d400, you roll 2 d20s)
+      </li>
+      <li>
+        For the reroll method, we need to find the average number of rerolls. I found this experimentally to be:<br/>
+        (a - t) / t<br/>
+        where <b>a</b> is the actual die and <b>t</b> is the target die.<br/>
+        There was a time when I would have been able to calculate that but alas.
+        The total cost is <b>a.cost * (1 + (a - t) / t)</b>.
+      </li>
+    </ul>
+    <h2>Conclusion</h2>
+    <h4>Why would you do this?</h4>
+    <p>
+      I woke up one morning and found that the devil had visited me in the night and bade me to make this.
+      It took more than 24 hours of coding and when I wasn't coding, I was thinking about how to do it.<br/>
+      It is completely useless.<br/>
+      It is my magnum opus.
+    </p>
+    <h4>Sources</h4>
+    <ol>
+      <li><a target="_blank" href="https://en.wikipedia.org/wiki/Geometric_series#Proof_of_convergence">Trust me bro.</a></li>
+      <li><a target="_blank" href="https://www.google.com/search?q=fundamental+theorem+of+arithmetic">Just Google it.</a></li>
+    </ol>
+    <p><a href="index.html">Back</a></p>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>dAny</title>
+    <script src="js/parse_tree.js"></script>
+    <script src="js/roll.js"></script>
+    <script src="js/find_best_paths.js"></script>
+    <script src="js/precalculated.js"></script>
+    
+    <link rel=stylesheet href="style.css">
+  </head>
+  
+  <body>
+    <h1>All dice can be approximated using just a D20.</h1>
+    <h2><p><a href="explanation.html">Explanation</a></p></h2>
+    <h2>Instructions</h2>
+    <p>
+      Enter your roll into the text box below as though it was a roll command in Roll20 without
+      the "/r". For example, to roll 3d6+20, type "3d6+20".
+    </p>
+    <p>The highest die that can be approximated by this application is a d10000 (ten thousand)</p>
+    <input type="text" id="rollInput" style="width:min(100%, 500px)">
+    <button id="rollButton" style="cursor:pointer;" onclick="rollButtonClicked()">Roll</button>
+    <div id="rollOutput"></div>
+    <hr/>
+    <div id="rollDisplay"></div>
+    
+    <div style="display:none">
+      <div class="d20" id="d20-template">
+        <img src="img/d20.png" />
+        <span>20</span>
+      </div>
+      <div class="multiply operation" id="multiply-template">
+        <div style="text-align: center;" class="operation-title">Multiply</div>
+        <div class="inner-operation">
+          <div class="argument"></div>
+          <div class="argument">X</div>
+          <div class="argument"></div>
+          <div class="argument">=</div>
+          <div class="argument">400</div>
+        </div>
+      </div>
+      <div class="factor operation" id="factor-template">
+        <div style="text-align: center;" class="operation-title">Factor</div>
+        <div class="inner-operation">
+          <div class="argument"></div>
+          <div class="argument">=</div>
+          <div class="argument">5</div>
+        </div>
+      </div>
+      <div class="reroll operation" id="reroll-template">
+        <div style="text-align: center;" class="operation-title">Reroll</div>
+        <div class="inner-operation">
+          <div class="argument"></div>
+          <div class="argument">=</div>
+          <div class="argument">20</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

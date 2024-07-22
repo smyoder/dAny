@@ -1,0 +1,58 @@
+table, table td, table th {
+  outline: 1px solid black;
+}
+
+table {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.d20 {
+  position: relative;
+  height: 35px;
+  display: inline-block;
+}
+
+.d20 > span {
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.d20 > img {
+  height: 100%;
+}
+
+.operation {
+  padding: 10px;
+  text-align: center;
+  display: inline-block;
+}
+
+.inner-operation {
+  text-align: left;
+}
+
+.multiply {
+  background-color: lightgreen;
+  outline: solid 1px green;
+}
+
+.factor {
+  background-color: lightpink;
+  outline: solid 1px darkred;
+}
+
+.reroll {
+  background-color: lightyellow;
+  outline: solid 1px goldenrod;
+}
+
+.argument {
+  display:inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
